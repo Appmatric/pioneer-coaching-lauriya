@@ -1,0 +1,902 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Mulish";
+  }
+}
+
+/* Root theme variables - Dark theme by default */
+:root {
+  color-scheme: dark;
+  /* Base colors */
+  --background-color: #131f2e;
+  --background-container-color: #001023;
+  --text-color: white;
+  --border-slate-700: #334155;
+
+  /* Custom colors from Tailwind config */
+  --custom-blue: #151e2e;
+  --custom-blue-dark: #030f22;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --cyan-400: #22d3ee;
+  --cyan-600: #0891b2;
+  --cyan-700: #0e7490;
+  --custom-slate: #1e293b;
+  /* Slate colors - Dark theme defaults */
+
+  /* Maintain dark theme colors explicitly */
+  --slate-700-color: #334155;
+  --slate-700-hover: #475569;
+  --slate-800-color: #1e293b;
+  --slate-900-color: #0f172a;
+  --slate-600-color: #475569;
+  /* Default/dark mode color stays the same */
+  --gray-900-color: #131F2E;
+
+  /* Primary colors */
+  --primary-25: #f4fbfc;
+  --primary-400: #60bfda;
+  --primary-500: #0094bd;
+  --primary-600: #00789e;
+  --primary-700: #005f7c;
+
+  /* Dark colors */
+  --dark-300: #5d6675;
+  --dark-400: #4a5463;
+  --dark-700: #131f2e;
+  --dark-800: #001023;
+
+  /* Sidebar & Border */
+  --sidebar-500: #253040;
+  --border-500: #5c6777;
+  --border-color: #6b7280;
+
+  /* Card colors */
+  --card-bg: #1c2939;
+  --card-border: #4a5568;
+
+  /* Button colors */
+  --button-bg: #4a5568;
+  --button-text: white;
+
+  /* Text Colors - Dark Theme */
+  --text-white: #ffffff;
+  --text-white-fix: #ffffff;
+  --text-white-reverse: #1e293b;
+  --text-slate-400: #94a3b8;
+  --text-slate-300: #cbd5e1;
+  --text-slate-200: #e2e8f0;
+  --text-slate-100: #f1f5f9;
+
+  --switch-bg-color: #1c2a3b;
+  /* Dark theme switch background */
+  --switch-active-bg: #2a3a4f;
+  /* Dark theme active button background */
+  --filter-inactive-bg: #1c2a3b;
+  --filter-inactive-hover: #2a3a4f;
+  --filter-active-bg: #0891b2;
+  /* cyan-600 */
+  --filter-active-hover: #0e7490;
+  /* cyan-700 */
+  --filter-count-bg: #ffffff;
+  --filter-count-text: #0891b2;
+  /* cyan-600 */
+
+  /* Circle UI Variables - Dark Theme */
+  --circle-slice-bg: rgba(30, 41, 59, 0.9);
+  --circle-slice-hover: rgb(51, 65, 85);
+  --circle-center-bg: rgba(30, 41, 59, 0.9);
+  --circle-stroke: #0891b2;
+  --circle-text-active: #22d3ee;
+  --circle-text-inactive: #ffffff;
+
+  /* Table Theme Variables - Dark */
+  --table-bg: #1f2937;
+  --table-border: #4a5463;
+  --table-hover: #374151;
+  --table-text: #d1d5db;
+  --table-header-bg: #1f2937;
+  --table-divide: #4a5463;
+  --table-filter-bg: #131f2e;
+  --table-filter-border: #4a5463;
+  --table-scrollbar-track: #1f2937;
+  --table-scrollbar-thumb: #4b5563;
+  --table-scrollbar-hover: #6b7280;
+  --table-highlight: rgba(236, 72, 153, 0.1);
+}
+
+/* Light theme overrides */
+.light {
+  color-scheme: light;
+  /* Base colors */
+  --background-color: #f4f2ee;
+  --background-container-color: #f8fafc;
+  --text-color: black;
+  --border-slate-700: #9ca3af;
+
+  /* Custom colors */
+  --custom-blue: #22d3ee;
+  --custom-blue-dark: #f8fafc;
+  --slate-800: #f1f5f9;
+  --slate-900: #f8fafc;
+  --cyan-400: #ffffff;
+  --cyan-600: #0891b2;
+  --cyan-700: #005f7c;
+  --custom-slate: #f1f5f9;
+  /* Slate colors - Light theme overrides */
+  /* Backgrounds */
+  --slate-900-color: #f4f2ee;
+  --slate-800-color: #f8fafc;
+  --slate-700-color: #f1f5f9;
+  --slate-700-hover: #e2e8f0;
+  --slate-600-color: #e2e8f0;
+  --gray-700-color: #f3f4f6;
+  --gray-900-color: #f8fafc;
+
+  /* Hover states */
+  --slate-hover-700: #7913b4;
+  --gray-hover-600: #e5e7eb;
+
+  /* Text colors */
+  /* --text-white: #0f172a;
+   --text-slate-400: #475569; */
+
+  /* Primary colors */
+  --primary-25: #0094bd;
+  --primary-400: #005f7c;
+  --primary-500: #60bfda;
+  --primary-600: #f4fbfc;
+  --primary-700: #f4fbfc;
+
+  /* Dark colors become light */
+  --dark-300: #94a3b8;
+  --dark-400: #cbd5e1;
+  --dark-700: #ffffff;
+  --dark-800: #ffffff;
+
+  /* Sidebar & Border */
+  --sidebar-500: #f8fafc;
+  --border-500: #e2e8f0;
+  --border-color: #e2e8f0;
+
+  /* Card colors */
+  --card-bg: #f8f9fa;
+  --card-border: #ddd;
+
+  /* Button colors */
+  --button-bg: #007bff;
+  --button-text: white;
+
+  /* Text Colors - Light Theme */
+  --text-white: #1e293b;
+  /* Changes white text to dark in light mode */
+  --text-white-fix: #ffffff;
+  /* Changes white text to dark in light mode */
+  --text-white-reverse: #ffffff;
+  /* Changes white text to dark in light mode */
+  --text-slate-400: #475569;
+  --text-slate-300: #334155;
+  --text-slate-200: #1e293b;
+  --text-slate-100: #0f172a;
+
+  --switch-bg-color: #d6e2ed;
+  /* Dark theme switch background */
+  --switch-active-bg: #005f7c;
+  /* Dark theme active button background */
+  --filter-inactive-bg: #f1f5f9;
+  /* slate-100 */
+  --filter-inactive-hover: #e2e8f0;
+  /* slate-200 */
+  --filter-active-bg: #0891b2;
+  /* keep cyan-600 */
+  --filter-active-hover: #0e7490;
+  /* keep cyan-700 */
+  --filter-count-bg: #ffffff;
+  --filter-count-text: #0891b2;
+  /* keep cyan-600 */
+
+  /* Circle UI Variables - Light Theme */
+  --circle-slice-bg: rgba(255, 255, 255, 0.9);
+  --circle-slice-hover: rgb(241, 245, 249);
+  --circle-center-bg: rgba(255, 255, 255, 0.9);
+  --circle-stroke: #0891b2;
+  --circle-text-active: #0891b2;
+  --circle-text-inactive: #334155;
+
+  /* Table Theme Variables - Light */
+  --table-bg: #ffffff;
+  --table-border: #e2e8f0;
+  --table-hover: #f8fafc;
+  --table-text: #475569;
+  --table-header-bg: #ffffff;
+  --table-divide: #e2e8f0;
+  --table-filter-bg: #f8fafc;
+  --table-filter-border: #e2e8f0;
+  --table-scrollbar-track: #f1f5f9;
+  --table-scrollbar-thumb: #cbd5e1;
+  --table-scrollbar-hover: #94a3b8;
+  --table-highlight: rgba(236, 72, 153, 0.05);
+}
+
+.bg-dark-700 {
+  background-color: var(--dark-700);
+}
+
+.bg-dark-800 {
+  background-color: var(--dark-800);
+}
+
+.header-divider {
+  left: 0px;
+  top: 12px;
+  bottom: 12px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--Colors-Border-border-primary, #4A5463);
+  align-self: stretch;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+}
+
+/*table colors*/
+.table-base {
+  background-color: var(--table-bg);
+  border-color: var(--table-border);
+}
+
+.table-hover {
+  background-color: var(--table-hover);
+}
+
+.table-text {
+  color: var(--table-text);
+}
+
+.table-divide {
+  border-color: var(--table-divide);
+}
+
+.table-filter {
+  background-color: var(--table-filter-bg);
+  border-color: var(--table-filter-border);
+}
+
+/* Circle theme classes */
+.fill-circle-slice {
+  fill: var(--circle-slice-bg);
+}
+
+.fill-circle-hover {
+  fill: var(--circle-slice-hover);
+}
+
+.fill-circle-center {
+  fill: var(--circle-center-bg);
+}
+
+.text-circle-active {
+  color: var(--circle-text-active);
+}
+
+.text-circle-inactive {
+  color: var(--circle-text-inactive);
+}
+
+/* filter global classes */
+.bg-filter-inactive {
+  background-color: var(--filter-inactive-bg) !important;
+}
+
+.hover\:bg-filter-inactive-hover:hover {
+  background-color: var(--filter-inactive-hover) !important;
+}
+
+.bg-filter-active {
+  background-color: var(--filter-active-bg) !important;
+}
+
+.hover\:bg-filter-active-hover:hover {
+  background-color: var(--filter-active-hover) !important;
+}
+
+.bg-filter-count {
+  background-color: var(--filter-count-bg) !important;
+}
+
+.text-filter-count {
+  color: var(--filter-count-text) !important;
+}
+
+/* switch button global classes */
+.bg-switch {
+  background-color: var(--switch-bg-color) !important;
+}
+
+.bg-switch-active {
+  background-color: var(--switch-active-bg) !important;
+}
+
+.light .bg-sidebar-500 {
+  background-color: #f4f2ee;
+}
+
+body {
+  background-color: var(--background-container-color);
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, transform;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: rgba(14, 165, 233, 0.2);
+  border: 2px dashed #0ea5e9;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  transition-duration: 100ms;
+  z-index: 2;
+  user-select: none;
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--dark-400);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--dark-300);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-700);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-300) var(--dark-400);
+  scroll-behavior: smooth;
+  /* padding-right: 5px; */
+}
+
+.react-resizable-handle {
+  position: absolute !important;
+  width: 20px !important;
+  height: 20px !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  background: none !important;
+  padding: 0 3px 3px 0;
+  cursor: se-resize;
+  z-index: 2;
+}
+
+.react-resizable-handle::after {
+  content: "" !important;
+  position: absolute !important;
+  right: 3px !important;
+  bottom: 3px !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-bottom: 2px solid var(--border-500) !important;
+  border-right: 2px solid var(--border-500) !important;
+  transition: border-color 0.2s;
+}
+
+.react-resizable-handle:hover::after {
+  border-color: var(--primary-400) !important;
+}
+
+/* Global Styles Using Variables */
+.bg-background {
+  background-color: var(--background-color);
+}
+
+.bg-slate-600 {
+  background-color: var(--slate-600-color) !important;
+}
+
+/* Light Mode Card Gradient Overrides */
+html.light [class*="bg-[linear-gradient"],
+body.light [class*="bg-[linear-gradient"],
+.light [class*="bg-[linear-gradient"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Specific override for activity log card gradient */
+html.light .activity-log-card,
+body.light .activity-log-card,
+.light .activity-log-card {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Override for common card component */
+html.light .card-component,
+body.light .card-component,
+.light .card-component {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Override for ESP card component */
+html.light .esp-card-component,
+body.light .esp-card-component,
+.light .esp-card-component {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Timeline ring overrides in light mode */
+html.light .timeline-ring.ring-2,
+body.light .timeline-ring.ring-2,
+.light .timeline-ring.ring-2 {
+  --tw-ring-color: #CDD5DF !important;
+}
+
+html.light [class*="ring-[#4A5463]"],
+body.light [class*="ring-[#4A5463]"],
+.light [class*="ring-[#4A5463]"] {
+  --tw-ring-color: #CDD5DF !important;
+}
+
+/* Timeline dot color overrides */
+html.light .timeline-point.timeline-point-location-title,
+body.light .timeline-point.timeline-point-location-title {
+  background-color: #384252 !important;
+}
+
+html.light .timeline-point.timeline-point-regular,
+body.light .timeline-point.timeline-point-regular {
+  background-color: #9AA4B2 !important;
+}
+
+.bg-slate-700 {
+  background-color: var(--slate-700-color) !important;
+}
+
+.hover\:bg-slate-700:hover {
+  background-color: var(--slate-700-hover) !important;
+}
+
+.bg-slate-800 {
+  background-color: var(--slate-800-color) !important;
+}
+
+.bg-slate-900 {
+  background-color: var(--slate-900-color) !important;
+}
+
+.bg-gray-900 {
+  background: var(--gray-900-color) !important;
+}
+
+.text-primary {
+  color: var(--text-color);
+}
+
+.border-primary {
+  border-color: var(--border-color);
+}
+
+.button-theme {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+.card-theme {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* fixed white global classes */
+.text-fixed-white {
+  color: #ffffff !important;
+}
+
+.optimize-text-ticket-custom {
+  color: #0094bd;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  transition: color 0.2s ease;
+  /* Add transition for smooth effect */
+}
+
+/* .optimize-text-ticket-custom:hover {
+  color: #0077cc !important; 
+} */
+.optimize-text-new-custom {
+  color: #039855 !important;
+}
+
+.optimize-text-pending-custom {
+  color: #dc6803 !important;
+}
+
+.optimize-text-solved-custom {
+  color: #12b76a !important;
+}
+
+.optimize-text-open-custom {
+  color: #005f7c !important;
+}
+
+/* white global classes */
+.text-white {
+  color: var(--text-white) !important;
+}
+
+/* white fix classes */
+.text-white-fix {
+  color: var(--text-white-fix) !important;
+}
+
+/* white reverse global classes */
+.text-white-reverse {
+  color: var(--text-white-reverse) !important;
+}
+
+.hover\:text-white-fix {
+  color: var(--text-white-fix) !important;
+}
+
+.border-slate-700 {
+  border-color: var(--border-slate-700) !important;
+}
+
+.text-slate-400 {
+  color: var(--text-slate-400) !important;
+}
+
+.text-slate-300 {
+  color: var(--text-slate-300) !important;
+}
+
+.text-slate-200 {
+  color: var(--text-slate-200) !important;
+}
+
+
+.text-slate-100 {
+  color: var(--text-slate-100) !important;
+}
+
+.range-slider .thumb {
+  width: 20px;
+  height: 20px;
+  cursor: grab;
+  background: #4A5463;
+  border-radius: 50%;
+  border: 2px solid #4A5463;
+  margin-top: -6px;
+}
+
+.track-1 {
+  background-color: #0094BD;
+}
+
+/* ========================================
+   COMPREHENSIVE LIGHT MODE GLOBAL OVERRIDES
+   ======================================== */
+
+/* Global background and body styling for light mode */
+html.light,
+body.light {
+  background-color: #f8fafc !important;
+  color: #131F2E !important;
+}
+
+/* Header styling for light mode */
+html.light header.bg-background,
+body.light header.bg-background,
+.light header.bg-background {
+  background-color: #003747 !important;
+  border-color: #557884 !important;
+}
+
+/* Main content backgrounds */
+html.light main,
+body.light main,
+.light main {
+  background-color: #f8fafc !important;
+}
+
+/* Fix for dark backgrounds in light mode */
+html.light .bg-slate-900,
+body.light .bg-slate-900,
+.light .bg-slate-900 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-slate-800,
+body.light .bg-slate-800,
+.light .bg-slate-800 {
+  background-color: #ffffff !important;
+}
+
+/* Text color fixes */
+html.light .text-white,
+body.light .text-white,
+.light .text-white {
+  color: #131F2E !important;
+}
+
+/* Navigation and sidebar overrides */
+html.light nav.bg-background-nav,
+body.light nav.bg-background-nav,
+.light nav.bg-background-nav {
+  background-color: #ffffff !important;
+}
+
+/* Footer styling */
+html.light footer.bg-background,
+body.light footer.bg-background,
+.light footer.bg-background {
+  background-color: #003747 !important;
+  border-color: #557884 !important;
+}
+
+/* Border overrides */
+html.light .border-slate-700,
+body.light .border-slate-700,
+.light .border-slate-700 {
+  border-color: #E2E8F0 !important;
+}
+
+/* Card and container overrides */
+html.light .bg-gray-800,
+body.light .bg-gray-800,
+.light .bg-gray-800 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-gray-900,
+body.light .bg-gray-900,
+.light .bg-gray-900 {
+  background-color: #f8fafc !important;
+}
+
+/* Button overrides */
+html.light button,
+body.light button,
+.light button {
+  /* Only override if not already styled */
+}
+
+html.light .btn-primary,
+body.light .btn-primary,
+.light .btn-primary {
+  background-color: #00789E !important;
+  color: #ffffff !important;
+  border-color: #00789E !important;
+}
+
+/* Table overrides */
+html.light table,
+body.light table,
+.light table {
+  background-color: #ffffff !important;
+}
+
+html.light th,
+body.light th,
+.light th {
+  background-color: #f8fafc !important;
+  color: #131F2E !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.light td,
+body.light td,
+.light td {
+  background-color: #ffffff !important;
+  color: #131F2E !important;
+  border-color: #E2E8F0 !important;
+}
+
+/* Form controls */
+html.light input,
+body.light input,
+.light input {
+  background-color: #ffffff !important;
+  color: #131F2E !important;
+  border-color: #CDD5DF !important;
+}
+
+html.light select,
+body.light select,
+.light select {
+  background-color: #ffffff !important;
+  color: #131F2E !important;
+  border-color: #CDD5DF !important;
+}
+
+/* Dropdown and modal overrides */
+html.light .dropdown-menu,
+body.light .dropdown-menu,
+.light .dropdown-menu {
+  background-color: #ffffff !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.light .modal,
+body.light .modal,
+.light .modal {
+  background-color: #ffffff !important;
+  color: #131F2E !important;
+}
+
+/* Override any remaining dark backgrounds */
+html.light [class*="bg-slate"],
+body.light [class*="bg-slate"],
+.light [class*="bg-slate"] {
+  background-color: #f8fafc !important;
+}
+
+html.light [class*="bg-gray"],
+body.light [class*="bg-gray"],
+.light [class*="bg-gray"] {
+  background-color: #ffffff !important;
+}
+
+/* Exceptions for InstallReports and PullReports modals */
+html.light .install-reports-container [class*="bg-gray"],
+body.light .install-reports-container [class*="bg-gray"],
+.light .install-reports-container [class*="bg-gray"],
+html.light .pull-reports-container [class*="bg-gray"],
+body.light .pull-reports-container [class*="bg-gray"],
+.light .pull-reports-container [class*="bg-gray"] {
+  background-color: revert !important;
+}
+
+/* Specific override for modal overlay bg-gray-200 and bg-gray-900 */
+html.light .bg-gray-200.bg-opacity-70,
+body.light .bg-gray-200.bg-opacity-70,
+.light .bg-gray-200.bg-opacity-70 {
+  background-color: rgba(229, 231, 235, 0.7) !important;
+}
+
+html.light .fixed.inset-0.bg-gray-200,
+body.light .fixed.inset-0.bg-gray-200,
+.light .fixed.inset-0.bg-gray-200 {
+  background-color: rgba(229, 231, 235, 0.7) !important;
+}
+
+/* Text color overrides for better contrast */
+html.light [class*="text-slate"],
+body.light [class*="text-slate"],
+.light [class*="text-slate"] {
+  color: #131F2E !important;
+}
+
+html.light [class*="text-gray"],
+body.light [class*="text-gray"],
+.light [class*="text-gray"] {
+  color: #131F2E !important;
+}
+
+/* Force proper application to the root element */
+html.light {
+  background: #f8fafc !important;
+}
+
+body.light {
+  background: #f8fafc !important;
+}
+
+/* ========================================
+   SCROLLBAR STYLING FOR LIGHT MODE
+   ======================================== */
+
+/* Specific scrollbar styling for activity details table and similar components */
+.light .activity-log-container ::-webkit-scrollbar,
+.light .table-container ::-webkit-scrollbar,
+.light .overflow-auto ::-webkit-scrollbar,
+.light .overflow-x-auto ::-webkit-scrollbar,
+.light .overflow-y-auto ::-webkit-scrollbar {
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.light .activity-log-container ::-webkit-scrollbar-track,
+.light .table-container ::-webkit-scrollbar-track,
+.light .overflow-auto ::-webkit-scrollbar-track,
+.light .overflow-x-auto ::-webkit-scrollbar-track,
+.light .overflow-y-auto ::-webkit-scrollbar-track {
+  background: #F1F5F9 !important;
+  border-radius: 4px !important;
+}
+
+.light .activity-log-container ::-webkit-scrollbar-thumb,
+.light .table-container ::-webkit-scrollbar-thumb,
+.light .overflow-auto ::-webkit-scrollbar-thumb,
+.light .overflow-x-auto ::-webkit-scrollbar-thumb,
+.light .overflow-y-auto ::-webkit-scrollbar-thumb {
+  background: #CBD5E1 !important;
+  border-radius: 4px !important;
+}
+
+.light .activity-log-container ::-webkit-scrollbar-thumb:hover,
+.light .table-container ::-webkit-scrollbar-thumb:hover,
+.light .overflow-auto ::-webkit-scrollbar-thumb:hover,
+.light .overflow-x-auto ::-webkit-scrollbar-thumb:hover,
+.light .overflow-y-auto ::-webkit-scrollbar-thumb:hover {
+  background: #00789E !important;
+}
+
+/* Specific overrides for containers that should show scrollbars in light mode */
+.light .overflow-auto {
+  scrollbar-width: thin !important;
+  scrollbar-color: #CBD5E1 #F1F5F9 !important;
+}
+
+.light .overflow-x-auto {
+  scrollbar-width: thin !important;
+  scrollbar-color: #CBD5E1 #F1F5F9 !important;
+}
+
+html.light .overflow-y-auto,
+body.light .overflow-y-auto,
+.light .overflow-y-auto {
+  scrollbar-width: thin !important;
+  scrollbar-color: #CBD5E1 #F1F5F9 !important;
+}
+
+.Toastify__toast-theme--dark {
+  border-radius: 8px !important;
+  border: 1px solid var(--Colors-Border-border-primary, #4A5463) !important;
+  background: var(--Colors-Background-bg-primary, #001023) !important;
+  color: #CDD5DF !important;
+  box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0 4px 6px -2px rgba(16, 24, 40, 0.03) !important;
+}
+
+.card-container {
+  border-radius: 12px;
+  border: 1px solid var(--Colors-Border-border-primary, #4A5463);
+  background: var(--Gradient-Cards, linear-gradient(181deg, #253240 -16.87%, rgba(37, 48, 64, 0.40) 35.14%));
+  box-shadow: 0 1px 3px 0 rgba(10, 13, 18, 0.10), 0 1px 2px 0 rgba(10, 13, 18, 0.06);
+  display: flex;
+  flex-direction: column;
+}

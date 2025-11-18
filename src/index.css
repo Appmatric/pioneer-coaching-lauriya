@@ -1,0 +1,317 @@
+/* Theme Colors */
+:root {
+  --bs-dark: #001023;
+  --bs-secondary: #1E293B;
+  --bs-info: #00B1B9;
+  --bs-danger: #DC3545;
+  --hover-bg: #2D3B4E;
+  --border-color: #4a5463;
+  --text-secondary: #94A3B8;
+  --box-shadow-color: rgba(0, 177, 185, 0.25);
+  --text-info: #00A3E0;
+}
+html, body {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+/* Base Styles */
+body {
+  background-color: var(--bs-dark);
+  color: white;
+}
+
+/* Background Colors */
+/* .bg-dark {
+  background-color: var(--bs-dark) !important;
+} */
+
+.bg-secondary {
+  background-color: var(--bs-secondary) !important;
+}
+
+/* Text Colors */
+.text-info {
+  color: var(--text-info) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-danger {
+  color: var(--bs-danger) !important;
+}
+
+.text-success {
+  color: #198754 !important;
+}
+
+/* Font Sizes and Weights */
+.font-xx-small {
+  font-size: xx-small;
+}
+
+.font-smaller {
+  font-size: smaller;
+}
+
+h6, .h6 {
+  color: white;
+  margin-bottom: 0;
+}
+
+b, strong {
+  color: white;
+}
+
+/* Button Styles */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn-secondary {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--hover-bg);
+  color: white;
+}
+
+.btn-info {
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #009AA1;
+  border-color: #009AA1;
+  color: white;
+}
+
+.btn-outline-info {
+  color: var(--bs-info);
+  border-color: var(--bs-info);
+}
+
+.btn-outline-info:hover {
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
+  color: white;
+}
+
+.btn-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  opacity: 0.8;
+}
+
+.btn-outline-danger {
+  color: var(--bs-danger);
+  border-color: var(--bs-danger);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--bs-danger);
+  color: white;
+}
+
+/* Form Controls */
+.form-control {
+  background-color: var(--bs-secondary);
+  color: white;
+}
+
+.form-control:focus {
+  background-color: var(--hover-bg);
+  border-color: var(--bs-info);
+  box-shadow: 0 0 0 0.25rem var(--box-shadow-color);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #64748B;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--bs-dark) !important;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.card-body {
+  position: relative;
+  height: calc(100% - 56px);
+  overflow-y: auto;
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.insight-card {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bs-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Progress Bar */
+.progress {
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--hover-bg);
+}
+
+.progress-bar {
+  border-radius: 3px;
+  background-color: var(--bs-danger);
+}
+
+/* Vertical Rule */
+.vr {
+  background-color: var(--border-color);
+}
+
+/* Grid Layout Styles */
+.layout {
+  position: relative;
+  min-height: calc(100vh - 100px);
+}
+
+.react-grid-layout {
+  margin: 0 auto;
+  transition: height 200ms ease;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+}
+
+.react-grid-item > .react-resizable-handle {
+  display: none;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  min-width: 200px;
+  background-color: var(--bs-secondary) !important;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover,
+.notification-item:hover,
+.profile-menu-item:hover {
+  background-color: var(--hover-bg) !important;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-divider {
+  border-color: var(--border-color);
+  margin: 0.5rem 0;
+}
+
+/* Notification Styles */
+.notification-menu {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  animation: slideDown 0.2s ease-out;
+}
+
+.notification-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+  background: var(--bs-secondary);
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background: var(--hover-bg);
+  border-radius: 3px;
+}
+
+/* Utilities */
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+/* Container */
+.app-container {
+  margin: 0 auto;
+  max-width: 1400px !important;
+}
+
+/* Small Text Styles */
+small {
+  color: var(--text-secondary);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chart Styles */
+.chart path {
+  transition: all 0.3s ease;
+}
+.CustomButton{
+  background-color: #0094BD !important;
+}
+.CustomOutline{
+  border-color: #0094BD !important;
+  color: #0094BD !important;
+}
