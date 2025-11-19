@@ -1,4 +1,7 @@
 /* Theme Colors */
+@import "tailwindcss";
+
+
 :root {
   --bs-dark: #001023;
   --bs-secondary: #1E293B;
