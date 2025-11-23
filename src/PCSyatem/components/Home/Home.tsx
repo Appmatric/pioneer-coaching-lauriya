@@ -12,19 +12,19 @@ const Home = () =>{
 
     const carouselImages = [
     {
-      src: "https://coachingfederation.org/wp-content/uploads/bb-plugin/cache/icf-community-events-foundation-volunteers-coaching-services-landscape-571dd3e779e49bceafe62a0a0726ed62-p5elk9s2m80t.jpg",
+      src: "/images/coaching-resources.png",
       alt: "Two women shaking hands and smiling warmly",
       title: "Coaching Resources",
       description: "Looking to achieve a goal? Solve a problem? We’ve got content to help."
     },
     {
-      src: "https://coachingfederation.org/wp-content/uploads/bb-plugin/cache/icf-community-and-events-collaborative-brainstorming-scaled-landscape-2b32071e43dbf981d5a8456d0eaf3cf1-dxpgvo2zchkt.jpg",
+      src: "/images/coaching-event.png",
       alt: "A diverse team collaborating on a transparent whiteboard with sticky notes",
       title: "Events",
       description: "Creativity + Camaraderie = Ignited Passion. This is what you’ll unleash at our events with industry experts and peers."
     },
     {
-      src: "https://coachingfederation.org/wp-content/uploads/bb-plugin/cache/icf-home-business-coaching-in-organization-scaled-landscape-166fc59ca95ddf91f6e4ddad298e8380-yhpkola0educ.jpg",
+      src: "/images/coaching-community.png",
       alt: "Close-up of a coaching session, notebook and pens visible",
       title: "Community",
       description: "Discussions go beyond words in our community platform — they become catalysts for growth, connection, and excellence in coaching."
