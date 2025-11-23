@@ -53,13 +53,13 @@ const Home = () =>{
   {
     title: "Become a Credentialed Coach With Pioneer",
     description: "Coaching is not a course, it's a mindset. Earning an ICF credential challenges you to continuously grow, making you a better coach tomorrow than you are today. Bring this difference to your clients.",
-    imageSrc: '/src/assets/images/Credentialed.png',
+    imageSrc: '/public/assets/images/Credentialed.png',
     imageAlt: 'Coach talking to a client on a rooftop'
   },
   {
     title: "Join a Global Community of Professional Coaches",
     description: "Have passion blended with purpose. Unlock a world of opportunities to advance in your coaching journey. Become a better coach and learn from peers who share your coaching mindset. See if you qualify for Pioneer Coaching membership and learn more about the benefits our members enjoy:",
-    imageSrc: '/src/assets/images/Global-Community.png',
+    imageSrc: '/public/assets/images/Global-Community.png',
     imageAlt: 'Coaches shaking hands in a professional setting'
   },
 ];
