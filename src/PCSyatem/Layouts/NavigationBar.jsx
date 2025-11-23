@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../../public/assets/images/logo-pioneer.png";
+import logo from "../../../public/images/logo-pioneer.png";
 import { Menu, X } from "lucide-react";
 
 const NavigationBar = () => {
