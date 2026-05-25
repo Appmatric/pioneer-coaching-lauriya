@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import ImageCarousel from "../../../components/Common/Card/ImageCarousel";
 import Card from "../../../components/Common/Card/Card";
 import ImageSlider from "../../../components/Common/slider/ImageSlider";
 
-// Data imports
 import sliderImages from "../../../utils/Data/sliderImages";
 import carouselImages from "../../../utils/Data/carouselImages";
 import Cards from "../../../utils/Data/Card";
 import KidsCourses from "../Courses/KidsCourses";
+import { ClassSelector } from "../ClassSelector/ClassSelector";
+import { CLASSES } from "../../../utils/Data/classData";
 
 const Home = () => {
+
+  //-------------------- use for class data action ---------------------------
+  const initialClassId = useMemo(() => 
+  CLASSES.find(c => c.label === 'Class 9')?.id ||CLASSES[0]?.id || '', []);
+  const [activeClassId, setActiveClassId] = useState<string>(initialClassId);
+  const handleClassSelection = (classId: string) => {
+    setActiveClassId(classId);
+  };
+  // Find the currently selected class label for display below the selector (optional)
+  const currentClassLabel = useMemo(() => 
+    CLASSES.find(c => c.id === activeClassId)?.label, [activeClassId]
+  );
+  //-----------------------------------------------------------------------
+
   return (
     <>
       <ImageSlider images={sliderImages} />
@@ -40,6 +55,12 @@ const Home = () => {
           ))}
         </section>
       </div> */}
+
+      <ClassSelector
+        classes={CLASSES}
+        activeClassId={activeClassId}
+        onSelectClass={handleClassSelection} 
+      />
     </>
   );
 };
