@@ -8,11 +8,14 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
   server: {
-    port: 3000
+    port: 3000,
   },
+
   preview: {
-    port: 3000
+    port: 3000,
   },
-  base: "./"
+
+  base: "/pioneer-coaching-lauriya/",
 })

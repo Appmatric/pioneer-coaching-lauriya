@@ -1,15 +1,16 @@
 {
-  "name": "vite-project",
+  "name": "pioneer-coaching-lauriya",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+   "homepage": "https://sumitkumargiri.github.io/pioneer-coaching-lauriya",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeployed": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
