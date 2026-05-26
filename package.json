@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sumitkumargiri.github.io/pioneer-coaching-lauriya",
+  "homepage": "https://appmatric.github.io/pioneer-coaching-lauriya",
   "scripts": {
     "start": "vite",
     "dev": "vite",
