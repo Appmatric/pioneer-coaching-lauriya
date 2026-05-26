@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-   "homepage": "https://sumitkumargiri.github.io/pioneer-coaching-lauriya",
+  "homepage": "https://sumitkumargiri.github.io/pioneer-coaching-lauriya",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -13,13 +13,13 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/vite": "^4.1.17",
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.15.1",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
